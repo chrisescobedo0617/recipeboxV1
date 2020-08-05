@@ -1,0 +1,9 @@
+{% if not recipe %}
+    <h1>The recipe you are looking for does not exist!</h1>
+{% else %}
+    <h1>{{ recipe.title }}</h1>
+    <h2>{{ recipe.author.name }}</h3>
+    <h3>{{ recipe.time_required }}</h5>
+    <h4>{{ recipe.description }}</h4>
+    <p>{{ recipe.instructions }}</p>
+{% endif %}
