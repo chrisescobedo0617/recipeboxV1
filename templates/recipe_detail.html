@@ -2,7 +2,7 @@
     <h1>The recipe you are looking for does not exist!</h1>
 {% else %}
     <h1>{{ recipe.title }}</h1>
-    <h2>{{ recipe.author.name }}</h3>
+    <a href="/author/{{ recipe.author.id }}/"><h2>{{ recipe.author.name }}</h2></a>
     <h3>{{ recipe.time_required }}</h5>
     <h4>{{ recipe.description }}</h4>
     <p>{{ recipe.instructions }}</p>
