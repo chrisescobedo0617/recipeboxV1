@@ -1,5 +1,7 @@
 <h1>{{ author_name.name }}</h1>
 
+<h2>{{ author_name.bio }}</h2>
+
 <ul>
     {% for rec in author_recipes %}
         <a href="/recipe/{{ rec.id }}/"><h2>{{ rec }}</h2></a>
