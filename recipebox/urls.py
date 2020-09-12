@@ -15,15 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth.decorators import login_required
 
 from homepage import views
 
 urlpatterns = [
     path('', views.index, name="homepage"),
     path('recipe/<int:recipe_id>/', views.recipe_detail),
+    path('editRecipe/<int:recipe_id>/', login_required(views.editRecipe.as_view())),
     path('author/<int:author_id>/', views.author_detail),
     path('addrecipe/', views.add_recipe, name="newrecipe"),
     path('addauthor/', views.add_author, name="newauthor"),
+    path('favorite/<int:recipe_id>/', views.favorite_view),
     path('login/', views.login_view),
     path('logout/', views.logout_view),
     path('admin/', admin.site.urls),

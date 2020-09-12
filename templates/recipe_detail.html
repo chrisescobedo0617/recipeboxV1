@@ -7,3 +7,6 @@
     <h4>{{ recipe.description }}</h4>
     <p>{{ recipe.instructions }}</p>
 {% endif %}
+{% if user.is_authenticated %}
+    <h2><a href="/favorite/{{ recipe.id }}">Favorite</h2>
+{% endif %}
