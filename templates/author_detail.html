@@ -1,4 +1,4 @@
-<h1>{{ author_name.name }}</h1>
+<h1>{{ author_name }}</h1>
 
 <h2>{{ author_name.bio }}</h2>
 
@@ -7,3 +7,8 @@
         <a href="/recipe/{{ rec.id }}/"><h2>{{ rec }}</h2></a>
     {% endfor %}
 </ul>
+
+<h1>Favorite Recipes</h1>
+{% for favorite in author_favorites %}
+<a href='/recipe/{{favorite.id}}'> {{ favorite }} </a>
+{% endfor %}
