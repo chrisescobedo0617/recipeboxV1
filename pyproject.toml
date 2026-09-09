@@ -1,6 +1,7 @@
-[tool.poetry]
+[project]
 name = "recipe_box"
 version = "0.1.0"
+dependencies = []
 description = "App to share recipes!"
 authors = ["Christopher Escobedo <chrisescobedo0617@gmail.com>"]
 license = "MIT"
